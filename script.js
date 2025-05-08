@@ -13,3 +13,8 @@ document.addEventListener("mouseover", e => {
     playerY = e.clientY = canvas.getBoundingClientRect().top - paddleHeight / 2;
 });
 
+function drawRect(x, y, w, h, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, w, h);
+}
+
