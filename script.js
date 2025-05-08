@@ -9,3 +9,7 @@ let ballX = canvas.width / 2;
 let ballY = canvas.height / 2;
 let ballSpeedX = 5, ballSpeedY = 3;
 
+document.addEventListener("mouseover", e => {
+    playerY = e.clientY = canvas.getBoundingClientRect().top - paddleHeight / 2;
+});
+
