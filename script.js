@@ -64,3 +64,9 @@ function draw() {
     drawBall(ballX, ballY, ballSize, "#fff");
 }
 
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
