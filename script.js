@@ -18,3 +18,9 @@ function drawRect(x, y, w, h, color) {
     ctx.fillRect(x, y, w, h);
 }
 
+function drawBall(x, y, size, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(x, y, size, 0, Math.PI * 2);
+    ctx.fill();
+}
