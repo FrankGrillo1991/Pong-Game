@@ -44,5 +44,15 @@ function update() {
     }
 
     // AI paddle collision
-    if (ballX > canvas.width - 20 && ballY > aiY)
+    if (ballX > canvas.width - 20 && ballY > aiY && ballY + paddleHeight) {
+        ballSpeedX = -ballSpeedX;
+    }
+
+    // AI movement
+    const aiCenter = aiY + paddleHeight / 2;
+    if (aiCenter < ballY - 35) aiY += 4;
+    else if (aiCenter > ballY + 35) aiY -= 4;
+
+    // Ball out of bounds
+    if (ballX < 0 || ballX > canvas.width) resetBall();
 }
