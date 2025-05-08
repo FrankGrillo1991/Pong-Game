@@ -70,3 +70,4 @@ function gameLoop() {
     requestAnimationFrame(gameLoop);
 }
 
+gameLoop();
