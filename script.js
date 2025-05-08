@@ -56,3 +56,11 @@ function update() {
     // Ball out of bounds
     if (ballX < 0 || ballX > canvas.width) resetBall();
 }
+
+function draw() {
+    drawRect(0, 0, canvas.width, canvas.height, "#111");
+    drawRect(10, playerY, paddleWidth, paddleHeight, "#fff");
+    drawRect(canvas.width - 20, aiY, paddleWidth, paddleHeight, "#fff");
+    drawBall(ballX, ballY, ballSize, "#fff");
+}
+
