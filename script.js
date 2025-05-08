@@ -24,3 +24,10 @@ function drawBall(x, y, size, color) {
     ctx.arc(x, y, size, 0, Math.PI * 2);
     ctx.fill();
 }
+
+function resetBall() {
+    ballX = canvas.width / 2;
+    ballY = canvas.height / 2;
+    ballSpeedX = -ballSpeedX;
+}
+
